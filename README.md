@@ -1,9 +1,8 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/kOqwghv0)
-# ML Project — [Название проекта]
+# ML Project — Предсказание доходности видеоигр
 
-**Студент:** [ФИО / Student ID]
+**Студент:** Чашкин Фёдор Борисович
 
-**Группа:** [Группа]
+**Группа:** БИВ231
 
 
 ## Оглавление
@@ -18,13 +17,15 @@
 
 ## Описание задачи
 
-<!-- Кратко опишите задачу: что предсказываем, какой датасет, метрика качества -->
+**Задача:** Предсказание общего дохода игры (задача регрессии).
 
-**Задача:** [Классификация / Регрессия / Кластеризация / ...]
+**Датасет:** Android Games EDA Ready Dataset (взято с сайта [Kaggle](https://www.kaggle.com/datasets/tsmgofficial/android-games-eda-ready-dataset)).
+Это синтетический датасет, специально созданный для изучения ML. В нём есть признаки разных типов и пропущенные значения.
 
-**Датасет:** [Название и источник датасета]
+**Целевая метрика:** RMSE.
+RMSE чувствительна к большим ошибкам, что особенно важно при прогнозировании дохода - текущей задачей.
 
-**Целевая метрика:** [Accuracy / F1 / RMSE / ...]
+*TODO: дополнительно рассмотреть MAR и R².*
 
 
 ## Структура репозитория
@@ -33,7 +34,7 @@
 .
 ├── data
 │   ├── processed               # Очищенные и обработанные данные
-│   └── raw                     # Исходные файлы
+│   └── raw                     # Исходный файл `android_games_eda_ready.csv`
 ├── models                      # Сохранённые модели 
 ├── notebooks
 │   ├── 01_eda.ipynb            # EDA
@@ -57,8 +58,8 @@
 Этот блок замените способом запуска вашего сервиса.
 ```bash
 # 1. Клонировать репозиторий
-git clone <url>
-cd <repo-name>
+git clone https://github.com/hsemlcourse/hseml-group-project-fedyanewlife
+cd hseml-group-project-fedyanewlife
 
 # 2. Создать виртуальное окружение
 python -m venv .venv
